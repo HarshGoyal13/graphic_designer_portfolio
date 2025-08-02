@@ -23,7 +23,7 @@ export default function ContactSection() {
     setButtonText("Sending...");
 
     try {
-      const response = await fetch("http://localhost:8080/contact", {
+      const response = await fetch("https://graphic-designer-portfolio.onrender.com/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json;charset=utf-8" },
         body: JSON.stringify(formDetails),
