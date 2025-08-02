@@ -1,0 +1,102 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Luckiest+Guy&family=Signika:wght@300..700&display=swap');
+
+
+
+.archivo-black-regular {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  
+}
+
+.signika {
+  font-family: "Signika", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+}
+
+.luckiest-guy-regular {
+  font-family: "Luckiest Guy", cursive;
+  font-style: normal;
+}
+
+
+/* For Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3b82f6; /* Tailwind Blue-500 */
+  border-radius: 10px;
+  border: 2px solid black; /* optional border contrast */
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #60a5fa; /* Lighter blue */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #3b82f6 transparent;
+}
+
+
+.cursor-bubble {
+  position: fixed;
+  width: 12px;
+  height: 12px;
+  background: rgba(59, 130, 246, 0.7); /* Tailwind's blue-500 */
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out;
+  animation: idlePulse 1.5s infinite ease-in-out;
+}
+
+/* Movement pop animation */
+.cursor-bubble.moving {
+  animation: pop 0.4s ease-out forwards;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+/* Idle pulsing animation */
+@keyframes idlePulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.5);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    box-shadow: 0 0 8px 8px rgba(59, 130, 246, 0);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+  }
+}
+
+
+
+
+
+
